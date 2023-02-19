@@ -26,7 +26,7 @@ const resolvers = {
         addUser: async (parent, args) => {
             const user = await User.create(args);
             const token = signToken(user);
-            return { user, token };
+            return { token, user };
         },
         saveBook: async (parent, args) => {
             const updatedUser = await User.findOneAndUpdate(
@@ -36,7 +36,7 @@ const resolvers = {
             );
             return updatedUser;
         },
-        deleteBook: async (parent, args) => {
+        removeBook: async (parent, args) => {
             const updatedUser = await User.findOneAndUpdate(
                 { _id },
                 { $pull: { savedBooks: { bookId: args.bookId } } },
