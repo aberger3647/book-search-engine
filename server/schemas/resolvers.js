@@ -14,7 +14,7 @@ const resolvers = {
                 [{ username: args.username },
                 { email: args.email}]
             });
-            const correctPw = await user.isCorrectPassword(args, password);
+            const correctPw = await user.isCorrectPassword(args.password);
 
             if (!correctPw) { 
                 await user.isCorrectPassword(args.password);
