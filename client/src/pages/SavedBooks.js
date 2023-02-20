@@ -22,7 +22,9 @@ console.log(data)
     }
 
     try {
-      await removeBook(bookId);
+      await removeBook({
+        variables: { bookId: bookId }
+      });
       // upon success, remove book's id from localStorage
       removeBookId(bookId);
     } catch (err) {
