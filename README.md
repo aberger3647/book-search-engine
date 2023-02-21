@@ -7,6 +7,7 @@
 Refactored a Google Books API search engine built with a RESTful API into a GraphQL API built with Apollo Server. App uses the MERN stack: React front end, MongoDB databse, and Node/Express server and API. 
 
 ## Deployed App
+[Live App](https://murmuring-stream-95769.herokuapp.com/)
 
 ## Table of Contents
 - [Usage](#usage)
